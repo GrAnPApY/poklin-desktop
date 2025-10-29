@@ -6,9 +6,10 @@ export function SignOutButton() {
   return (
     <button
       onClick={() => signOut({ callbackUrl: '/auth/login' })}
-      className="rounded-md bg-red-600 px-4 py-2 text-sm font-semibold text-white hover:bg-red-500"
+      className="group relative px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
     >
-      Sign out
+      <span className="relative z-10">Sign Out</span>
+      <div className="absolute inset-0 rounded-lg bg-gray-100 dark:bg-gray-800 opacity-0 group-hover:opacity-100 transition-opacity" />
     </button>
   );
 }
